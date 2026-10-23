@@ -1,53 +1,84 @@
-# Password Strength Analyzer
+# 🔐 Password Strength Analyzer
 
-## Overview
-Password Strength Analyzer is a Python GUI application that evaluates the strength of user-entered passwords. It checks password length, complexity, and security requirements, then provides suggestions to improve password security.
+A lightweight desktop application built with **Python and Tkinter** that evaluates password composition, provides improvement suggestions, and generates random passwords locally.
 
-## Features
-- Password length validation
-- Uppercase and lowercase letter detection
-- Number detection
-- Special character detection
-- Password strength scoring (0–100)
-- Weak, Medium, and Strong classification
-- Strong password generator
-- Security improvement suggestions
-- User-friendly GUI using Tkinter
+> **Important:** This is an educational password-strength estimator, not a breach checker or a guarantee that a password is secure. It does not upload or store the entered password.
 
-## Technologies Used
-- Python
-- Tkinter
-- Regular Expressions (Regex)
+## ✨ Features
 
-## How to Run
+- **Password strength estimate** with a score out of 100
+- **Composition checks** for length, uppercase/lowercase letters, numbers, and special characters
+- **Common-password warning** for a small built-in list
+- **Actionable suggestions** to improve password composition
+- **Secure password generation** using Python's `secrets` module
+- **Show/hide password** toggle
+- **Copy generated password** to the clipboard
+- **Keyboard support** — press Enter to analyze
+- **Dark-themed Tkinter interface**
+- **Local processing** — no network requests or password storage
 
-1. Install Python
-2. Download the project files
-3. Open terminal in the project folder
-4. Run:
+## 🧰 Built With
 
-```bash
-python password_strength_analyzer.py
-```
+- Python 3.10+
+- Tkinter (included with most standard Python installations)
+- `secrets`, `string` (Python standard library)
 
-## Project Structure
+## 🚀 Run Locally
 
-```
+1. Install Python 3.10 or newer.
+2. Clone the repository:
+
+   ```bash
+   git clone https://github.com/shivarjunchaturvedi/Password-Strength-Analyzer.git
+   cd Password-Strength-Analyzer
+   ```
+
+3. Launch the app:
+
+   ```bash
+   python password_strength_analyzer.py
+   ```
+
+On Windows, `py password_strength_analyzer.py` may also work. No third-party Python packages are required.
+
+## 🖼️ Preview
+
+![Password Strength Analyzer preview](result.png)
+
+## 📁 Project Structure
+
+```text
 Password-Strength-Analyzer/
-│
-├── password_strength_analyzer.py
-├── README.md
-└── result.png
+├── password_strength_analyzer.py  # Tkinter app and password analysis
+├── result.png                     # Application screenshot
+└── README.md                      # Project documentation
 ```
 
-## Sample Output
+## 🧠 How the Score Works
 
-The application displays:
-- Password Score
-- Password Strength
-- Security Suggestions
-- Generated Strong Password
+The score is a simple composition-based heuristic that awards points for length and character categories. Passwords in the small common-password list are flagged as very weak.
 
-## Author
+This score is **not** an estimate of the time required to crack a password. Real-world password safety also depends on uniqueness, reuse, randomness, the attacker's capabilities, and whether the password has appeared in a breach. Long, unique passphrases are often easier to remember and can be safer than predictable character substitutions.
 
-Shivarjun Chaturvedi
+## 🔒 Privacy Notes
+
+- Password analysis happens locally in the app.
+- The app does not make network requests or save entered passwords.
+- A generated password is briefly held in the app and may be copied to the system clipboard. Treat the clipboard as sensitive and clear it when appropriate.
+
+## 🛠️ Possible Future Improvements
+
+- Add unit tests for score boundaries and password generation
+- Expand or replace the small common-password list with a privacy-preserving local dataset
+- Add an accessible score indicator and improved keyboard navigation
+- Offer adjustable generated-password length
+
+## 👨‍💻 Author
+
+**Shivarjun Chaturvedi**
+
+- GitHub: [@shivarjunchaturvedi](https://github.com/shivarjunchaturvedi)
+
+---
+
+⭐ If you find this project useful, consider starring the repository.
