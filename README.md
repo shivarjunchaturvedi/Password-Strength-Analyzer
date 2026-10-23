@@ -41,16 +41,18 @@ A lightweight desktop application built with **Python and Tkinter** that evaluat
 
 On Windows, `py password_strength_analyzer.py` may also work. No third-party Python packages are required.
 
-## 🖼️ Preview
+## 🖼️ Application Preview
 
-![Password Strength Analyzer preview](result.png)
+![Updated dark-theme Password Strength Analyzer application screenshot](result.png)
+
+*The application analyzes password composition locally and can generate a random password.*
 
 ## 📁 Project Structure
 
 ```text
 Password-Strength-Analyzer/
 ├── password_strength_analyzer.py  # Tkinter app and password analysis
-├── result.png                     # Application screenshot
+├── result.png                     # Latest application screenshot
 └── README.md                      # Project documentation
 ```
 
